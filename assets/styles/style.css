@@ -14,6 +14,14 @@
     font-display: swap;
 }
 
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/Inter/Inter-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
 * {
     box-sizing: border-box;
 }
@@ -35,13 +43,19 @@ a {
     margin: 0 auto;
 }
 
-/* Шапка сайта */
+/* Header */
 
 .header {
     display: flex;
     align-items: center;
 
     margin: 30px 0 35px;
+}
+
+.header-menu {
+    width: 100%;
+    display: flex;
+    align-items: center;
 }
 
 .navigation {
@@ -76,11 +90,26 @@ a {
     border-bottom: 1px solid #ffffff;
 }
 
-.header-link-text{
+.header-link-text {
     font-size: 20px;
 }
 
-/* Основная секция */
+.header-link-arrow_black {
+    display: none;
+}
+
+.burger-btn {
+    display: none;
+
+    background-color: inherit;
+    border: none;
+}
+
+.burger-header-wrapper {
+    display: none;
+}
+
+/* Main section */
 
 .main {
     display: flex;
@@ -100,6 +129,10 @@ a {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.button-wrapper {
+    display: none;
 }
 
 .steps {
@@ -149,6 +182,7 @@ a {
     color: #f6ffd2;
     margin: 0;
     display: inline-block;
+    text-align: center;
 }
 
 .step-symbol {
@@ -188,6 +222,8 @@ a {
 }
 
 .information-button {
+    font-family: 'Inter', sans-serif;
+
     width: 215px;
     height: 50px;
     background-color: #ffffff;
@@ -195,4 +231,312 @@ a {
     border-radius: 167px;
     border: none;
     margin: 0 auto;
+    cursor: pointer;
+}
+
+/* Modal window */
+
+.modal-wrapper {
+    position: fixed;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, .5);
+    z-index: 1;
+}
+
+.modal-window {
+    font-family: 'Inter', sans-serif;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    overflow-y: scroll;
+
+    width: 77.6%;
+    max-height: 80%;
+    padding: 96px 61px;
+    border-radius: 35px;
+
+    background-color: #ffffff;
+    color: #000000;
+
+    z-index: 2;
+}
+
+.modal-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+.close-button,
+.burger-close-button {
+    position: absolute;
+    background-color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.close-button {
+    right: 39px;
+    top: 39px;
+}
+
+.information-text {
+    margin: 0;
+    font-size: 20px;
+    line-height: 140%;
+    text-align: center;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1150px) {
+
+    .container {
+        width: 90%;
+    }
+
+    /* Main section */
+
+    .main-information {
+        width: 100%;
+    }
+
+    .button-wrapper {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        padding: 0 11px;
+        margin-top: 3px;
+        margin-bottom: 65px;
+    }
+
+    .slider-button {
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        background-color: inherit;
+        border: none;
+        color: #F6FFD2;
+        font-size: 14px;
+    }
+
+    .steps {
+        background-image: none;
+        display: flex;
+        gap: 40px;
+
+        overflow-x: auto;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+
+        height: 100%;
+        padding: 15px;
+        margin: 0;
+
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scroll-padding: 15px
+    }
+
+    .step {
+        position: relative;
+        top: 0;
+        left: 0;
+
+        width: 100%;
+        height: 217px;
+        flex-shrink: 0;
+
+        flex-direction: column;
+        justify-content: center;
+        gap: 22px;
+
+        scroll-snap-align: start;
+    }
+
+    .step-number {
+        width: 74px;
+        height: 74px;
+        margin: 0;
+    }
+
+    .step-number-image {
+        width: 25%;
+    }
+}
+
+@media (max-width: 870px) {
+
+    /* header */
+
+    .container{
+        width: 100%;
+    }
+
+    .header {
+        margin: 30px 15px 32px;
+    }
+
+    .header-menu {
+        position: fixed;
+        flex-direction: column;
+
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 252px;
+        width: 100%;
+        padding: 28px 27px 0 15px;
+
+        background-color: #ffffff;
+        color: #000000;
+        z-index: 10;
+
+        transform: translateY(0);
+        transition: transform 0.5s ease;
+    }
+
+    .navigation {
+        margin: 0;
+        padding-left: 12px;
+    }
+
+    .navigation-list {
+        flex-direction: column;
+        gap: 15px;
+        margin-bottom: 33px;
+        font-size: 14px;
+    }
+
+    .header-link {
+        color: #000000;
+        margin: 0;
+        border-bottom: 1px solid #000000;
+        gap: 50px;
+        padding-left: 9px;
+    }
+
+    .header-link-text {
+        font-size: 14px;
+    }
+
+    .header-link-arrow {
+        display: none;
+    }
+
+    .header-link-arrow_black {
+        display: block;
+    }
+
+    .header-logo {
+        font-size: 20px;
+        width: 100px;
+    }
+
+    .burger-btn {
+        display: block;
+        margin-left: auto;
+    }
+
+    .burger-header-text {
+        margin: 0;
+    }
+
+    .burger-header-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 17px;
+    }
+
+    .burger-header-logo {
+        width: 88px;
+        color: #F2F3EF;
+        font-size: 20px;
+        font-weight: 700;
+    }
+
+    .burger-header-text {
+        font-size: 12px;
+        margin-left: auto;
+        margin-right: 22px;
+    }
+
+    .burger-close-button {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 0;
+    }
+
+    .menu-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    /* Main section */
+    .main-title {
+        font-size: 35px;
+    }
+
+    .main-information {
+        margin-top: 17px;
+    }
+
+    .step-symbol {
+        width: 57px;
+        top: -32px;
+        right: -38px;
+    }
+
+    /* Modal window */
+
+    .modal-window {
+        padding: 58px 26px;
+    }
+
+    .information-text {
+        font-size: 14px;
+    }
+
+    .close-button {
+        top: 16px;
+        right: 16px;
+    }
+
+    .close-button-image {
+        width: 16px;
+    }
+
+    .information-button{
+        width: 181px;
+        height: 42px;
+        font-size: 20px;
+    }
+
+    .hidden-menu {
+        transform: translateY(-252px);
+    }
+}
+
+@media (max-width: 320px){
+    body{
+        background-image: url('../img/main-bg-mobile.png');
+        background-size: cover;
+    }
 }

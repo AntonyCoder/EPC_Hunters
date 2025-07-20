@@ -12,19 +12,33 @@
 <body>
     <div class="container">
         <!-- Шапка -->
+        <div class="menu-overlay hidden"></div>
         <header class="header">
             <span class="header-logo">Epc Hunters</span>
-            <nav class="navigation">
-                <ul class="navigation-list">
-                    <li class="navigation-list-item">Loren ipsum</li>
-                    <li class="navigation-list-item">Loren ipsum</li>
-                    <li class="navigation-list-item">Loren ipsum</li>
-                </ul>
-            </nav>
-            <a href="#" class="header-link">
-                <span class="header-link-text">LOREN IPSUM</span>
-                <img src="/assets/svg/arrow_top_right.svg" alt="arrow" class="header-link-arrow">
-            </a>
+            <div class="header-menu hidden-menu">
+                <div class="burger-header-wrapper">
+                    <span class="burger-header-logo">Epc Hunters</span>
+                    <p class="burger-header-text">Loren ipsum</p>
+                    <button class="burger-close-button">
+                        <img src="./assets/svg/close-button.svg" alt="close" class="close-button-image">
+                    </button>
+                </div>
+                <nav class="navigation">
+                    <ul class="navigation-list">
+                        <li class="navigation-list-item">Loren ipsum</li>
+                        <li class="navigation-list-item">Loren ipsum</li>
+                        <li class="navigation-list-item">Loren ipsum</li>
+                    </ul>
+                </nav>
+                <a href="#" class="header-link">
+                    <span class="header-link-text">LOREN IPSUM</span>
+                    <img src="/assets/svg/arrow_top_right.svg" alt="arrow" class="header-link-arrow">
+                    <img src="/assets/svg/arrow_top_right black.svg" alt="arrow" class="header-link-arrow_black">
+                </a>
+            </div>
+            <button class="burger-btn">
+                <img src="/assets/svg/burger-menu.svg" alt="menu" class="burger-btn-image">
+            </button>
         </header>
         <!-- Основная секция -->
         <main class="main">
@@ -40,44 +54,82 @@
                     </div>
                     <div class="step-two step">
                         <div class="step-number">
-                            <img src="/assets/svg/2.svg" alt="one" class="step-number-image">
+                            <img src="/assets/svg/2.svg" alt="two" class="step-number-image">
                         </div>
                         <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         <img src="/assets/svg/symbol.svg" alt="symbol" class="step-symbol">
                     </div>
                     <div class="step-three step">
                         <div class="step-number">
-                            <img src="/assets/svg/3.svg" alt="one" class="step-number-image">
+                            <img src="/assets/svg/3.svg" alt="three" class="step-number-image">
                         </div>
                         <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         <img src="/assets/svg/symbol.svg" alt="symbol" class="step-symbol">
                     </div>
                     <div class="step-four step">
                         <div class="step-number">
-                            <img src="/assets/svg/4.svg" alt="one" class="step-number-image">
+                            <img src="/assets/svg/4.svg" alt="four" class="step-number-image">
                         </div>
                         <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         <img src="/assets/svg/symbol.svg" alt="symbol" class="step-symbol">
                     </div>
                     <div class="step-five step">
                         <div class="step-number">
-                            <img src="/assets/svg/5.svg" alt="one" class="step-number-image">
+                            <img src="/assets/svg/5.svg" alt="five" class="step-number-image">
                         </div>
                         <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         <img src="/assets/svg/symbol.svg" alt="symbol" class="step-symbol">
                     </div>
                     <div class="step-six step">
                         <div class="step-number">
-                            <img src="/assets/svg/6.svg" alt="one" class="step-number-image">
+                            <img src="/assets/svg/6.svg" alt="six" class="step-number-image">
                         </div>
                         <p class="step-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit</p>
                         <img src="/assets/svg/symbol.svg" alt="symbol" class="step-symbol">
                     </div>
                 </div>
+                <div class="button-wrapper">
+                    <button class="slider-button prev">
+                        <img src="/assets/svg/prev-button.svg" alt="prev">
+                        <span class="slider-button-text">loren ipsum</span>
+                    </button>
+                    <button class="slider-button next">
+                        <span class="slider-button-text">loren ipsum</span>
+                        <img src="/assets/svg/next-button.svg" alt="next">
+                    </button>
+                </div>
                 <button class="information-button">INFO</button>
             </section>
         </main>
+        <div class="modal-wrapper hidden">
+            <div class="modal-overlay"></div>
+            <div class="modal-window">
+                <button class="close-button">
+                    <img src="./assets/svg/close-button.svg" alt="close" class="close-button-image">
+                </button>
+                <p class="information-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                    accusantium,
+                    aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque
+                    consectetur accusamus,
+                    impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                    accusantium,
+                    aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque
+                    consectetur accusamus,
+                    impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                    accusantium,
+                    aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque
+                    consectetur accusamus,
+                    impedit molestiae ut enim! Lorem ipsum dolor sit, amet consectetur adipisicing elit. In
+                    accusantium,
+                    aliquid ab doloribus quo possimus minus dolorem. Sequi explicabo quidem rem veniam rerum itaque
+                    consectetur accusamus,
+                    impedit molestiae ut enim!</p>
+            </div>
+        </div>
     </div>
+    <script src="/assets/js/showModal.js"></script>
+    <script src="/assets/js/slider.js"></script>
+    <script src="/assets/js/burger-menu.js"></script>
 </body>
 
 </html>
